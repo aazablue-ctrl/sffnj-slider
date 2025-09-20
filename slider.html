@@ -3,51 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <title>Slider</title>
-  <style>
-    body {
-      margin: 0;
-      background: white;
-    }
-    .sffnj-slider {
-      position: relative;
-      width: 1024px;
-      height: 768px;
-      overflow: hidden;
-      margin: 0 auto;
-    }
+  
+<style>
+  .sffnj-slider {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    margin: 2rem auto;
+  }
 
-    .sffnj-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 1024px;
-      height: 768px;
-      opacity: 0;
-      z-index: 0;
-      transition: opacity 0.5s ease;
-    }
+  .sffnj-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.5s ease;
+    object-fit: cover;
+  }
 
-    .sffnj-slide.active {
-      opacity: 1;
-      z-index: 1;
-    }
+  .sffnj-slide.active {
+    opacity: 1;
+    z-index: 1;
+  }
 
+  .sffnj-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .sffnj-prev { left: 10px; }
+  .sffnj-next { right: 10px; }
+
+  @media (max-width: 768px) {
     .sffnj-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 3rem;
-      color: white;
-      background: rgba(0, 0, 0, 0.5);
-      border: none;
-      padding: 0 15px;
-      cursor: pointer;
-      z-index: 10;
+      font-size: 1.5rem;
+      padding: 0 10px;
     }
+  }
+</style>
 
-    .sffnj-prev { left: 10px; }
-    .sffnj-next { right: 10px; }
-  </style>
 </head>
 <body>
 
