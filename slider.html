@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #870581}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #97007e}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #000000}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #885d30}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #000000; min-height: 16.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #b50013}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px '.AppleSystemUIFontMonospaced'; color: #0d6401}
+    span.s1 {color: #97007e}
+    span.s2 {color: #6f5a1e}
+    span.s3 {color: #b50013}
+    span.s4 {color: #000000}
+    span.s5 {color: #1400c4}
+    span.s6 {color: #885d30}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE <span class="s1">html</span>&gt;</p>
+<p class="p2">&lt;html <span class="s2">lang</span>=<span class="s3">"en"</span>&gt;</p>
+<p class="p2">&lt;head&gt;</p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">  </span></span>&lt;meta <span class="s2">charset</span>=<span class="s3">"UTF-8"</span>&gt;</p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">  </span></span>&lt;title&gt;<span class="s4">Slider</span>&lt;/title&gt;</p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">  </span></span>&lt;style&gt;</p>
+<p class="p3"><span class="Apple-converted-space">    </span><span class="s1">body</span> {</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">margin</span>: <span class="s5">0</span>;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">background</span>: white;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>}</p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span>.sffnj-slider<span class="s4"> {</span></p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">position</span>: relative;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">width</span>: <span class="s5">1024px</span>;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">height</span>: <span class="s5">768px</span>;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">overflow</span>: hidden;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">margin</span>: <span class="s5">0</span> auto;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>}</p>
+<p class="p5"><br></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span>.sffnj-slide<span class="s4"> {</span></p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">position</span>: absolute;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">top</span>: <span class="s5">0</span>;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">left</span>: <span class="s5">0</span>;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">width</span>: <span class="s5">1024px</span>;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">height</span>: <span class="s5">768px</span>;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">opacity</span>: <span class="s5">0</span>;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">z-index</span>: <span class="s5">0</span>;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">transition</span>: opacity <span class="s5">0.5s</span> ease;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>}</p>
+<p class="p5"><br></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span>.sffnj-slide.active<span class="s4"> {</span></p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">opacity</span>: <span class="s5">1</span>;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">z-index</span>: <span class="s5">1</span>;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>}</p>
+<p class="p5"><br></p>
+<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span>.sffnj-nav<span class="s4"> {</span></p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">position</span>: absolute;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">top</span>: <span class="s5">50%</span>;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">transform</span>: translateY(-<span class="s5">50%</span>);</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">font-size</span>: <span class="s5">3rem</span>;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">color</span>: white;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">background</span>: rgba(<span class="s5">0</span>, <span class="s5">0</span>, <span class="s5">0</span>, <span class="s5">0.5</span>);</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">border</span>: none;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">padding</span>: <span class="s5">0</span> <span class="s5">15px</span>;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">cursor</span>: pointer;</p>
+<p class="p3"><span class="Apple-converted-space">      </span><span class="s1">z-index</span>: <span class="s5">10</span>;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>}</p>
+<p class="p5"><br></p>
+<p class="p3"><span class="Apple-converted-space">    </span><span class="s6">.sffnj-prev</span> { <span class="s1">left</span>: <span class="s5">10px</span>; }</p>
+<p class="p3"><span class="Apple-converted-space">    </span><span class="s6">.sffnj-next</span> { <span class="s1">right</span>: <span class="s5">10px</span>; }</p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">  </span></span>&lt;/style&gt;</p>
+<p class="p2">&lt;/head&gt;</p>
+<p class="p2">&lt;body&gt;</p>
+<p class="p5"><br></p>
+<p class="p6"><span class="s1">&lt;div </span><span class="s2">class</span><span class="s1">=</span>"sffnj-slider"<span class="s1">&gt;</span></p>
+<p class="p6"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;button </span><span class="s2">class</span><span class="s1">=</span>"sffnj-nav sffnj-prev"<span class="s1">&gt;</span><span class="s5">&amp;#10094;</span><span class="s1">&lt;/button&gt;</span></p>
+<p class="p6"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;button </span><span class="s2">class</span><span class="s1">=</span>"sffnj-nav sffnj-next"<span class="s1">&gt;</span><span class="s5">&amp;#10095;</span><span class="s1">&lt;/button&gt;</span></p>
+<p class="p5"><br></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">  </span></span>&lt;!-- Slides --&gt;</p>
+<p class="p6"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;img </span><span class="s2">class</span><span class="s1">=</span>"sffnj-slide active"<span class="s1"> </span><span class="s2">src</span><span class="s1">=</span>"https://sffnj.org/user/pages/07.news/07.blacks-in-philanthropy-conference-2025-rest-over-resilience/img1.jpg"<span class="s1"> /&gt;</span></p>
+<p class="p6"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;img </span><span class="s2">class</span><span class="s1">=</span>"sffnj-slide"<span class="s1"> </span><span class="s2">src</span><span class="s1">=</span>"https://sffnj.org/user/pages/07.news/07.blacks-in-philanthropy-conference-2025-rest-over-resilience/img2.jpg"<span class="s1"> /&gt;</span></p>
+<p class="p6"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;img </span><span class="s2">class</span><span class="s1">=</span>"sffnj-slide"<span class="s1"> </span><span class="s2">src</span><span class="s1">=</span>"https://sffnj.org/user/pages/07.news/07.blacks-in-philanthropy-conference-2025-rest-over-resilience/img3.jpg"<span class="s1"> /&gt;</span></p>
+<p class="p7"><span class="s4"><span class="Apple-converted-space">  </span></span>&lt;!-- Continue through to --&gt;</p>
+<p class="p6"><span class="s4"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;img </span><span class="s2">class</span><span class="s1">=</span>"sffnj-slide"<span class="s1"> </span><span class="s2">src</span><span class="s1">=</span>"https://sffnj.org/user/pages/07.news/07.blacks-in-philanthropy-conference-2025-rest-over-resilience/img58.jpg"<span class="s1"> /&gt;</span></p>
+<p class="p2">&lt;/div&gt;</p>
+<p class="p5"><br></p>
+<p class="p2">&lt;script&gt;</p>
+<p class="p3"><span class="Apple-converted-space">  </span><span class="s1">const</span> slides = document.querySelectorAll(<span class="s3">'.sffnj-slide'</span>);</p>
+<p class="p3"><span class="Apple-converted-space">  </span><span class="s1">const</span> prev = document.querySelector(<span class="s3">'.sffnj-prev'</span>);</p>
+<p class="p3"><span class="Apple-converted-space">  </span><span class="s1">const</span> next = document.querySelector(<span class="s3">'.sffnj-next'</span>);</p>
+<p class="p3"><span class="Apple-converted-space">  </span><span class="s1">let</span> index = <span class="s5">0</span>;</p>
+<p class="p5"><br></p>
+<p class="p3"><span class="Apple-converted-space">  </span><span class="s1">function</span> showSlide(i) {</p>
+<p class="p3"><span class="Apple-converted-space">    </span>slides.forEach((slide, idx) =&gt; {</p>
+<p class="p3"><span class="Apple-converted-space">      </span>slide.classList.toggle(<span class="s3">'active'</span>, idx === i);</p>
+<p class="p3"><span class="Apple-converted-space">    </span>});</p>
+<p class="p3"><span class="Apple-converted-space">  </span>}</p>
+<p class="p5"><br></p>
+<p class="p3"><span class="Apple-converted-space">  </span>prev.addEventListener(<span class="s3">'click'</span>, () =&gt; {</p>
+<p class="p3"><span class="Apple-converted-space">    </span>index = (index - <span class="s5">1</span> + slides.length) % slides.length;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>showSlide(index);</p>
+<p class="p3"><span class="Apple-converted-space">  </span>});</p>
+<p class="p5"><br></p>
+<p class="p3"><span class="Apple-converted-space">  </span>next.addEventListener(<span class="s3">'click'</span>, () =&gt; {</p>
+<p class="p3"><span class="Apple-converted-space">    </span>index = (index + <span class="s5">1</span>) % slides.length;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>showSlide(index);</p>
+<p class="p3"><span class="Apple-converted-space">  </span>});</p>
+<p class="p5"><br></p>
+<p class="p3"><span class="Apple-converted-space">  </span>showSlide(index);</p>
+<p class="p2">&lt;/script&gt;</p>
+<p class="p5"><br></p>
+<p class="p2">&lt;/body&gt;</p>
+<p class="p2">&lt;/html&gt;</p>
+</body>
+</html>
